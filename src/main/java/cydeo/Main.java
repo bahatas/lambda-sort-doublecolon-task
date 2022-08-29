@@ -4,6 +4,9 @@ package cydeo;
 import static cydeo.DataGenerator.*;
 import static cydeo.Service.*;
 
+/**
+ * Solutions will  be here
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -16,10 +19,12 @@ public class Main {
 
         //EXAMPLE
         System.out.println("***get all employees if their Id number is odd");
-        System.out.println(filter(getAllEmployees(),employee -> employee.getId()%2!=0));
+        System.out.println(filter(getAllEmployees(), employee -> employee.getId() % 2 != 0));
 
-
-        //System.out.println("***get all employees if their Id number is even");
+/**
+ * todo @Kadifa kudic
+ */
+//        System.out.println("***get all employees if their Id number is even");
 
 
         //System.out.println("***get all employees if they are FEMALE***");
@@ -30,7 +35,9 @@ public class Main {
 
         //System.out.println("***get all employees if they are older than 50");
 
-
+/**
+* todo @Violetta
+*/
         //System.out.println("***get all employees whose company name info starts with A or a");
 
 
@@ -39,7 +46,9 @@ public class Main {
 
         //System.out.println("get all companies if the company name consist of ,");
 
-
+/**
+ * todo @Shukur
+ */
         //System.out.println("get all companies if the company name ends with a");
 
 
@@ -47,7 +56,9 @@ public class Main {
 
 
         //System.out.println("get the single employee with id information. If there is no employee with the id then throw exception");
-
+/**
+ * todo @Kramer
+ */
 
         //System.out.println("get the single company with id information. If there is no company with the id then throw exception");
 
@@ -57,9 +68,10 @@ public class Main {
 
         //System.out.println("show all the employees full name and corresponding age information in one list");
 
-
+/**
+ * todo Entisar
+ */
         //System.out.println("show all the employees address information with their age in one list");
-
 
 
         //System.out.println("***get just the fullName of all employees if their Id number is even***");
@@ -67,7 +79,9 @@ public class Main {
 
         //System.out.println("***just print the employees if their address id is 6");
 
-
+/**
+ * todo @Nihan
+ */
         //System.out.println("***just print the companies if they are located in address id 2");
 
 
@@ -76,7 +90,9 @@ public class Main {
 
         //System.out.println("***get all female employees older than 45 and promote all with 100.000 salary and manager role");
 
-
+/**
+* todo @Adelina
+*/
         //System.out.println("***print all employees***");
 
 
@@ -85,7 +101,9 @@ public class Main {
 
         //System.out.println("print all address");
 
-
+/**
+ * todo @Tugay
+ */
         //System.out.println("***SORTING QUESTIONS***");
 
         //System.out.println("***sort all employees with id in ascending order***");
@@ -93,7 +111,9 @@ public class Main {
 
         //System.out.println("***sort all employees with id in descending order***");
 
-
+/**
+ * todo @Ertugrul
+ */
         //System.out.println("sort all employees with age in ascending order");
 
 
