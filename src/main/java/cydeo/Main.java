@@ -1,6 +1,8 @@
 package cydeo;
 
 
+import java.util.stream.Collectors;
+
 import static cydeo.DataGenerator.*;
 import static cydeo.Service.*;
 
@@ -24,7 +26,8 @@ public class Main {
 /**
  * todo @Kadifa kudic
  */
-//        System.out.println("***get all employees if their Id number is even");
+      //System.out.println("***get all employees if their Id number is even");
+
 
 
         //System.out.println("***get all employees if they are FEMALE***");
@@ -38,13 +41,25 @@ public class Main {
 /**
 * todo @Violetta
 */
-        //System.out.println("***get all employees whose company name info starts with A or a");
+        System.out.println("***get all employees whose company name info starts with A or a");
+        getAllEmployees().stream()
+                .filter(employee -> employee.getCompany().getCompanyName().startsWith("A") ||
+                        employee.getCompany().getCompanyName().startsWith("a"))
+                .collect(Collectors.toList());
 
 
-        //System.out.println("*** get all employees their company is located in Utah Indiana or California as a state ");
+        System.out.println("*** get all employees their company is located in Utah Indiana or California as a state ");
+        getAllEmployees().stream()
+                .filter(employee -> employee.getCompany().getAddress().getState().equals("California") ||
+                        employee.getCompany().getAddress().getState().equals("Utah") ||
+                        employee.getCompany().getAddress().getState().equals("Indiana"))
+                .collect(Collectors.toList());
 
 
-        //System.out.println("get all companies if the company name consist of ,");
+        System.out.println("get all companies if the company name consist of ,");
+        getAllCompanies().stream()
+                .filter(company -> company.getCompanyName().contains(","))
+                .collect(Collectors.toList());
 
 /**
  * todo @Shukur
