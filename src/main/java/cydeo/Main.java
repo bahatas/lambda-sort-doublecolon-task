@@ -1,6 +1,10 @@
 package cydeo;
 
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
 import static cydeo.DataGenerator.*;
 import static cydeo.Service.*;
 
@@ -72,12 +76,34 @@ public class Main {
  * todo Entisar
  */
         //System.out.println("show all the employees address information with their age in one list");
+//still didnt figure this out
 
+        System.out.println("show all the employees address information with their age in one list");
 
-        //System.out.println("***get just the fullName of all employees if their Id number is even***");
+        //still working on this
 
+        System.out.println("***get just the fullName of all employees if their Id number is even***");
+        Function<Employee,List<String> > employee_fullNAme= ( emp)->{
+            List<String> FullNames_List=new ArrayList<>();
+            if(emp.getId()%2==0){
+                String fullName=  emp.getFullName();
+                FullNames_List.add(fullName);
+            }
+            return FullNames_List;
+        };
+        System.out.println(employee_fullNAme);
 
         //System.out.println("***just print the employees if their address id is 6");
+        Function<Employee,List<Employee> > employee_List= (emp)->{
+            List<Employee> emp_List=new ArrayList<>();
+            String id=Integer.toString(emp.getId());
+         if(id.startsWith("6")){
+                emp_List.add(emp);
+            }
+            return emp_List;
+        };
+        System.out.println(employee_List);
+
 
 /**
  * todo @Nihan
