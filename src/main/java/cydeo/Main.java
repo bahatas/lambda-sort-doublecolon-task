@@ -95,11 +95,17 @@ public class Main {
 */
         //System.out.println("***print all employees***");
 
+        EMPLOYEE_LIST.forEach(System.out::println);
+
 
         //System.out.println("print all companies");
 
+        COMPANY_LIST.forEach(System.out::println);
+
 
         //System.out.println("print all address");
+
+        ADDRESS_LIST.forEach(System.out::println);
 
 /**
  * todo @Tugay
