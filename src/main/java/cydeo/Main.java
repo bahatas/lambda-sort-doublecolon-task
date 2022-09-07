@@ -1,6 +1,8 @@
 package cydeo;
 
 
+import java.util.ArrayList;
+
 import static cydeo.DataGenerator.*;
 import static cydeo.Service.*;
 
@@ -59,14 +61,28 @@ public class Main {
 /**
  * todo @Kramer
  */
+        System.out.println("--------------------------");
+        System.out.println("get the single company with id information. If there is no company with the id then throw exception");
 
-        //System.out.println("get the single company with id information. If there is no company with the id then throw exception");
+        System.out.println(
+                filter(getAllCompanies(), company -> company.getId()!=null && company.getId()==1)
+        );
+        System.out.println("----------------------");
+        System.out.println("get the single address with id information. If there is no address with the id then throw exception");
 
+        System.out.println(
+                filter(getAllAddress(),address -> address.getId()!=null && address.getId()==1)
+        );
+        System.out.println("-----------------");
+        System.out.println("show all the employees full name and corresponding age information in one list");
+        ArrayList<String> list11 = new ArrayList<>();
 
-        //System.out.println("get the single address with id information. If there is no address with the id then throw exception");
+        System.out.println(
 
+        filter(getAllEmployees(),employee -> employee.getFullName()!=null && employee.getAge() != null)
 
-        //System.out.println("show all the employees full name and corresponding age information in one list");
+                );
+
 
 /**
  * todo Entisar
